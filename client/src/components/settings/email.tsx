@@ -8,7 +8,8 @@ import {
 } from '@freecodecamp/react-bootstrap';
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
-import { TFunction, Trans, withTranslation } from 'react-i18next';
+import type { TFunction } from 'i18next';
+import { Trans, withTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import type { Dispatch } from 'redux';
@@ -132,7 +133,11 @@ function EmailSettings({
     state: confirmEmailValidation,
     message: confirmEmailValidationMessage
   } = getValidationForConfirmEmail();
-
+  const isDisabled =
+    newEmailValidation !== 'success' ||
+    confirmEmailValidation !== 'success' ||
+    isPristine;
+  const ariaLabel = t('settings.email.heading');
   if (!currentEmail) {
     return (
       <div>
@@ -170,12 +175,17 @@ function EmailSettings({
         </FullWidthRow>
       )}
       <FullWidthRow>
-        <form id='form-update-email' onSubmit={handleSubmit}>
+        <form
+          id='form-update-email'
+          {...(!isDisabled
+            ? { onSubmit: handleSubmit }
+            : { onSubmit: e => e.preventDefault() })}
+        >
           <FormGroup controlId='current-email'>
             <ControlLabel>{t('settings.email.current')}</ControlLabel>
             <FormControl.Static>{currentEmail}</FormControl.Static>
           </FormGroup>
-          <div role='group' aria-label={t('settings.email.heading')}>
+          <div role='group' aria-label={ariaLabel}>
             <FormGroup
               controlId='new-email'
               validationState={newEmailValidation}
@@ -206,18 +216,16 @@ function EmailSettings({
             </FormGroup>
           </div>
           <BlockSaveButton
-            disabled={
-              newEmailValidation !== 'success' ||
-              confirmEmailValidation !== 'success' ||
-              isPristine
-            }
+            aria-disabled={isDisabled}
+            bgSize='lg'
+            {...(isDisabled && { tabIndex: -1 })}
           >
             {t('buttons.save')}{' '}
             <span className='sr-only'>{t('settings.email.heading')}</span>
           </BlockSaveButton>
         </form>
       </FullWidthRow>
-      <Spacer />
+      <Spacer size='medium' />
       <FullWidthRow>
         <form id='form-quincy-email' onSubmit={handleSubmit}>
           <ToggleSetting

@@ -55,7 +55,7 @@ type SuperBlockOrder = {
 };
 
 // all languages should have this many, one for each current cert
-export const numberOfSuperBlocksOnLanding = 11;
+export const numberOfSuperBlocksOnLanding = 12;
 
 /*
  * This is the used for tests to make sure a superBlock isn't out of order
@@ -78,7 +78,10 @@ export const defaultSuperBlockOrder: SuperBlocks[] = [
   SuperBlocks.DataAnalysisPy,
   SuperBlocks.InfoSec,
   SuperBlocks.MachineLearningPy,
-  SuperBlocks.CodingInterviewPrep
+  SuperBlocks.CollegeAlgebraPy,
+  SuperBlocks.CodingInterviewPrep,
+  SuperBlocks.ProjectEuler,
+  SuperBlocks.TheOdinProject
 ];
 
 /*
@@ -105,7 +108,8 @@ export const superBlockOrder: SuperBlockOrder = {
       SuperBlocks.SciCompPy,
       SuperBlocks.DataAnalysisPy,
       SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.MachineLearningPy,
+      SuperBlocks.CollegeAlgebraPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
@@ -121,10 +125,15 @@ export const superBlockOrder: SuperBlockOrder = {
           SuperBlocks.DataAnalysisPy,
           SuperBlocks.InfoSec,
           SuperBlocks.MachineLearningPy,
-          SuperBlocks.CodingInterviewPrep
+          SuperBlocks.CollegeAlgebraPy,
+          SuperBlocks.CodingInterviewPrep,
+          SuperBlocks.ProjectEuler
         ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [
+          SuperBlocks.JsAlgoDataStructNew,
+          SuperBlocks.TheOdinProject
+        ],
         [SuperBlockStates.Legacy]: [SuperBlocks.RespWebDesign]
       },
       [TranslationStates.NotAudited]: {
@@ -147,7 +156,8 @@ export const superBlockOrder: SuperBlockOrder = {
       SuperBlocks.SciCompPy,
       SuperBlocks.DataAnalysisPy,
       SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.MachineLearningPy,
+      SuperBlocks.CollegeAlgebraPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
@@ -170,10 +180,15 @@ export const superBlockOrder: SuperBlockOrder = {
           SuperBlocks.RelationalDb,
           SuperBlocks.InfoSec,
           SuperBlocks.MachineLearningPy,
-          SuperBlocks.CodingInterviewPrep
+          SuperBlocks.CollegeAlgebraPy,
+          SuperBlocks.CodingInterviewPrep,
+          SuperBlocks.ProjectEuler
         ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [
+          SuperBlocks.JsAlgoDataStructNew,
+          SuperBlocks.TheOdinProject
+        ],
         [SuperBlockStates.Legacy]: []
       }
     }
@@ -190,7 +205,8 @@ export const superBlockOrder: SuperBlockOrder = {
       SuperBlocks.SciCompPy,
       SuperBlocks.DataAnalysisPy,
       SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.MachineLearningPy,
+      SuperBlocks.CollegeAlgebraPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
@@ -213,10 +229,15 @@ export const superBlockOrder: SuperBlockOrder = {
       [TranslationStates.NotAudited]: {
         [SuperBlockStates.Current]: [
           SuperBlocks.RelationalDb,
-          SuperBlocks.CodingInterviewPrep
+          SuperBlocks.CollegeAlgebraPy,
+          SuperBlocks.CodingInterviewPrep,
+          SuperBlocks.ProjectEuler
         ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [
+          SuperBlocks.JsAlgoDataStructNew,
+          SuperBlocks.TheOdinProject
+        ],
         [SuperBlockStates.Legacy]: []
       }
     }
@@ -233,7 +254,8 @@ export const superBlockOrder: SuperBlockOrder = {
       SuperBlocks.SciCompPy,
       SuperBlocks.DataAnalysisPy,
       SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.MachineLearningPy,
+      SuperBlocks.CollegeAlgebraPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
@@ -256,10 +278,15 @@ export const superBlockOrder: SuperBlockOrder = {
       [TranslationStates.NotAudited]: {
         [SuperBlockStates.Current]: [
           SuperBlocks.RelationalDb,
-          SuperBlocks.CodingInterviewPrep
+          SuperBlocks.CollegeAlgebraPy,
+          SuperBlocks.CodingInterviewPrep,
+          SuperBlocks.ProjectEuler
         ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [
+          SuperBlocks.JsAlgoDataStructNew,
+          SuperBlocks.TheOdinProject
+        ],
         [SuperBlockStates.Legacy]: []
       }
     }
@@ -276,7 +303,8 @@ export const superBlockOrder: SuperBlockOrder = {
       SuperBlocks.SciCompPy,
       SuperBlocks.DataAnalysisPy,
       SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.MachineLearningPy,
+      SuperBlocks.CollegeAlgebraPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
@@ -299,9 +327,15 @@ export const superBlockOrder: SuperBlockOrder = {
         [SuperBlockStates.Legacy]: [SuperBlocks.RespWebDesign]
       },
       [TranslationStates.NotAudited]: {
-        [SuperBlockStates.Current]: [],
+        [SuperBlockStates.Current]: [
+          SuperBlocks.CollegeAlgebraPy,
+          SuperBlocks.ProjectEuler
+        ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [
+          SuperBlocks.JsAlgoDataStructNew,
+          SuperBlocks.TheOdinProject
+        ],
         [SuperBlockStates.Legacy]: []
       }
     }
@@ -318,7 +352,8 @@ export const superBlockOrder: SuperBlockOrder = {
       SuperBlocks.SciCompPy,
       SuperBlocks.DataAnalysisPy,
       SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.MachineLearningPy,
+      SuperBlocks.CollegeAlgebraPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
@@ -341,9 +376,15 @@ export const superBlockOrder: SuperBlockOrder = {
         [SuperBlockStates.Legacy]: [SuperBlocks.RespWebDesign]
       },
       [TranslationStates.NotAudited]: {
-        [SuperBlockStates.Current]: [],
+        [SuperBlockStates.Current]: [
+          SuperBlocks.CollegeAlgebraPy,
+          SuperBlocks.ProjectEuler
+        ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [
+          SuperBlocks.JsAlgoDataStructNew,
+          SuperBlocks.TheOdinProject
+        ],
         [SuperBlockStates.Legacy]: []
       }
     }
@@ -360,7 +401,8 @@ export const superBlockOrder: SuperBlockOrder = {
       SuperBlocks.SciCompPy,
       SuperBlocks.DataAnalysisPy,
       SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.MachineLearningPy,
+      SuperBlocks.CollegeAlgebraPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
@@ -382,9 +424,16 @@ export const superBlockOrder: SuperBlockOrder = {
         [SuperBlockStates.Legacy]: [SuperBlocks.RespWebDesign]
       },
       [TranslationStates.NotAudited]: {
-        [SuperBlockStates.Current]: [SuperBlocks.CodingInterviewPrep],
+        [SuperBlockStates.Current]: [
+          SuperBlocks.CollegeAlgebraPy,
+          SuperBlocks.CodingInterviewPrep,
+          SuperBlocks.ProjectEuler
+        ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [
+          SuperBlocks.JsAlgoDataStructNew,
+          SuperBlocks.TheOdinProject
+        ],
         [SuperBlockStates.Legacy]: []
       }
     }
@@ -401,7 +450,8 @@ export const superBlockOrder: SuperBlockOrder = {
       SuperBlocks.SciCompPy,
       SuperBlocks.DataAnalysisPy,
       SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.MachineLearningPy,
+      SuperBlocks.CollegeAlgebraPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
@@ -425,9 +475,15 @@ export const superBlockOrder: SuperBlockOrder = {
         [SuperBlockStates.Legacy]: []
       },
       [TranslationStates.NotAudited]: {
-        [SuperBlockStates.Current]: [],
+        [SuperBlockStates.Current]: [
+          SuperBlocks.CollegeAlgebraPy,
+          SuperBlocks.ProjectEuler
+        ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [
+          SuperBlocks.JsAlgoDataStructNew,
+          SuperBlocks.TheOdinProject
+        ],
         [SuperBlockStates.Legacy]: []
       }
     }
@@ -444,7 +500,8 @@ export const superBlockOrder: SuperBlockOrder = {
       SuperBlocks.SciCompPy,
       SuperBlocks.DataAnalysisPy,
       SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.MachineLearningPy,
+      SuperBlocks.CollegeAlgebraPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
@@ -468,10 +525,15 @@ export const superBlockOrder: SuperBlockOrder = {
           SuperBlocks.DataAnalysisPy,
           SuperBlocks.InfoSec,
           SuperBlocks.MachineLearningPy,
-          SuperBlocks.CodingInterviewPrep
+          SuperBlocks.CollegeAlgebraPy,
+          SuperBlocks.CodingInterviewPrep,
+          SuperBlocks.ProjectEuler
         ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [
+          SuperBlocks.JsAlgoDataStructNew,
+          SuperBlocks.TheOdinProject
+        ],
         [SuperBlockStates.Legacy]: []
       }
     }
@@ -488,7 +550,8 @@ export const superBlockOrder: SuperBlockOrder = {
       SuperBlocks.SciCompPy,
       SuperBlocks.DataAnalysisPy,
       SuperBlocks.InfoSec,
-      SuperBlocks.MachineLearningPy
+      SuperBlocks.MachineLearningPy,
+      SuperBlocks.CollegeAlgebraPy
     ],
     [CurriculumMaps.Learn]: {
       [TranslationStates.Audited]: {
@@ -511,10 +574,15 @@ export const superBlockOrder: SuperBlockOrder = {
           SuperBlocks.DataAnalysisPy,
           SuperBlocks.InfoSec,
           SuperBlocks.MachineLearningPy,
-          SuperBlocks.CodingInterviewPrep
+          SuperBlocks.CollegeAlgebraPy,
+          SuperBlocks.CodingInterviewPrep,
+          SuperBlocks.ProjectEuler
         ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [
+          SuperBlocks.JsAlgoDataStructNew,
+          SuperBlocks.TheOdinProject
+        ],
         [SuperBlockStates.Legacy]: [SuperBlocks.RespWebDesign]
       }
     }
@@ -545,11 +613,17 @@ function shouldShowSuperblocks({
   return true;
 }
 
+type Config = {
+  language: string;
+  showNewCurriculum?: string;
+  showUpcomingChanges?: string;
+};
+
 export function getLearnSuperBlocks({
   language = 'english',
   showNewCurriculum = 'false',
   showUpcomingChanges = 'false'
-}) {
+}: Config): SuperBlocks[] {
   const learnSuperBlocks: SuperBlocks[] = [];
 
   Object.values(TranslationStates).forEach(translationState => {
@@ -577,7 +651,7 @@ export function getAuditedSuperBlocks({
   language = 'english',
   showNewCurriculum = 'false',
   showUpcomingChanges = 'false'
-}) {
+}: Config): SuperBlocks[] {
   const auditedSuperBlocks: SuperBlocks[] = [];
 
   Object.values(SuperBlockStates).forEach(superBlockState => {
@@ -603,7 +677,7 @@ export function getNotAuditedSuperBlocks({
   language = 'english',
   showNewCurriculum = 'false',
   showUpcomingChanges = 'false'
-}) {
+}: Config): SuperBlocks[] {
   const notAuditedSuperBlocks: SuperBlocks[] = [];
 
   Object.values(SuperBlockStates).forEach(superBlockState => {

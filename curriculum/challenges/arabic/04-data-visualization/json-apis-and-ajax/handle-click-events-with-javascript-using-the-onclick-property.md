@@ -1,6 +1,6 @@
 ---
 id: 587d7fad367417b2b2512be1
-title: التعامل مع أحداث النقر (Handle Click Events) مع JavaScript باستخدام خاصية عند النقر (onclick)
+title: التعامل مع أحداث النقر (Handle Click Events) مع JavaScript باستخدام خاصية onclick عند النقر
 challengeType: 6
 forumTopicId: 301503
 dashedName: handle-click-events-with-javascript-using-the-onclick-property
@@ -8,7 +8,7 @@ dashedName: handle-click-events-with-javascript-using-the-onclick-property
 
 # --description--
 
-تريد تنفذ كودك بمجرد الانتهاء من تحميل الصفحة, مرة واحدة فقط. لهذا الغرض، يمكنك إرفاق حدث (event) من JavaScript لمستند مسمى `DOMContentLoaded`. إليك كود الذي يفعل ذلك:
+تريد أن ينفذ كودك فقط عندما ينتهي تحميل الصفحة. لهذا الغرض، يمكنك إرفاق حدث (event) من JavaScript لمستند مسمى `DOMContentLoaded`. إليك الكود الذي يفعل ذلك:
 
 ```js
 document.addEventListener('DOMContentLoaded', function() {
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-يمكنك تنفيذ معالجات الأحداث (event handlers) التي تحدث داخل وظيفة `DOMContentLoaded`. يمكنك تفعيل معالج الحدث `onclick` الذي يُفَعل عندما ينقر المستخدم على العنصر مع معرف `getMessage`، عن طريق إضافة الرمز التالي:
+يمكنك تنفيذ معالجات الأحداث (event handlers) التي تحدث داخل وظيفة `DOMContentLoaded`. You can implement an `onclick` event handler which triggers when the user clicks on the `#getMessage` element, by adding the following code:
 
 ```js
 document.getElementById('getMessage').onclick = function(){};
@@ -24,11 +24,11 @@ document.getElementById('getMessage').onclick = function(){};
 
 # --instructions--
 
-أضف معالج أحداث النقر داخل وظيفة `DOMContentLoaded` للعنصر مع معرف `getMessage`.
+أضف معالج الأحداث (event handler) داخل وظيفة `DOMContentLoaded` للعنصر الذي له id قيمته `getMessage`.
 
 # --hints--
 
-يجب أن تستخدم كودك طريقة `document.getElementById` لتحديد عنصر `getMessage`.
+Your code should use the `document.getElementById` method to select the element whose id is `getMessage`.
 
 ```js
 assert(code.match(/document\s*\.getElementById\(\s*?('|")getMessage\1\s*?\)/g));

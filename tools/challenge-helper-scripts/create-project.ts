@@ -133,7 +133,7 @@ async function createIntroMD(superBlock: string, block: string, title: string) {
   const introMD = `---
 title: Introduction to the ${title}
 block: ${block}
-superBlock: Responsive Web Design
+superBlock: ${blockNameify(superBlock.replace('2022/', ''))}
 isBeta: true
 ---
 
@@ -262,6 +262,6 @@ void prompt([
   )
   .then(() =>
     console.log(
-      'All set.  Now use npm run clean:client in the root and it should be good to go.'
+      'All set.  Now use pnpm run clean:client in the root and it should be good to go.'
     )
   );
